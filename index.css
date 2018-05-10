@@ -1,0 +1,326 @@
+#root{
+	position: relative;
+	margin-left: -512px;
+	left:50%;
+	width: 1024px;
+	height: 768px;
+	color: #fff;
+	background: #4d6fff;
+	border: 2px solid red;
+}
+
+.button{
+	position: absolute;
+	cursor: pointer;
+}
+
+#timerMain{
+	width:130px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -51px;	
+	display: flex;
+	justify-content: space-between;
+}
+
+#timerMain img{
+	width: auto;
+	height: 40px;
+}
+#timer{
+	display: flex;
+	align-items:center;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#score_fuel{
+	width:130px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: 120px;	
+	display: flex;
+	justify-content: space-between;
+}
+
+#score_fuel img{
+	width: auto;
+	height: 40px;
+}
+
+#score__fuel{
+	display: flex;
+	align-items:center;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#score_star{
+	width:130px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: 290px;	
+	display: flex;
+	justify-content: space-between;	
+}
+
+#score_star img{
+	width: auto;
+	height: 40px;
+}
+
+#score__star{
+	display: flex;
+	align-items:center;
+	font-size: 36px;
+	font-weight: bold;	
+}
+
+.plane{
+	width:164px;
+	height:151px;
+    background-image: url('images/plane_two.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid red;
+	left: 10px;
+	top: 300px;
+	animation: plane .5s steps(1) infinite;
+	z-index: 2;
+}
+
+@keyframes plane{
+	0%,100%{
+		background-position:161px;
+	}
+	50%{
+		background-position:330px;
+	}
+}
+
+.bird{
+	width:100px;
+	height:90px;
+    background-image: url('images/bird1.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid red;
+	left: 10px;
+	top: 300px;
+	animation: bird .5s steps(1) infinite;
+}
+
+@keyframes bird{
+	0%,100%{
+		background-position:100px;
+	}
+	50%{
+		background-position:200px;
+	}
+}
+
+.cloud{	
+	width:165px;
+	height:90px;
+    background-image: url('images/cloud.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid red;
+	left: 10px;
+	top: 300px;
+	animation: cloud 3s infinite;
+	
+}
+
+@keyframes cloud{
+	0%,100%{
+		transform: scale(1.1);
+	}
+	50%{
+		transform: scale(0.9);
+	}
+}
+
+.fuel{
+	width:116px;
+	height:190px;
+    background-image: url('images/fuel.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 10px;
+	top: 300px;
+	animation: fuel 5s infinite;
+}
+
+@keyframes fuel{
+	0%,100%{
+		transform: rotate(-10deg);
+	}
+	50%{
+		transform: rotate(10deg);
+	}
+}
+
+.star{
+	width:88px;
+	height:90px;
+    background-image: url('images/star.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 10px;
+	top: 300px;
+	animation: star 7s infinite;	
+}
+
+@keyframes star{
+	0%,100%{
+		transform: rotate(360deg);
+	}
+	50%{
+		transform: rotate(190deg);
+	}
+}
+
+#planeUp{
+	width:90px;
+	height:90px;
+    background-image: url('images/up.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	right:140px;
+	bottom: 140px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+#planeDown{
+	width:90px;
+	height:90px;
+    background-image: url('images/down.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	right:140px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+#planeLeft{
+	width:90px;
+	height:90px;
+    background-image: url('images/left.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	right:230px;
+	bottom: 75px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+#planeRight{
+	width:90px;
+	height:90px;
+    background-image: url('images/right.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	right:50px;
+	bottom: 75px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+
+.btnSound{
+	width:110px;
+	height:110px;
+    background-image: url('images/audio_on.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 20px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.btnShiftUp{
+	width:100px;
+	height:100px;
+    background-image: url('images/shrift_up.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 150px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.btnShiftDown{
+	width:90px;
+	height:90px;
+    background-image: url('images/shrift_down.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 270px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.btnPause{
+	width:100px;
+	height:100px;
+    background-image: url('images/pause.png');
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+	position: absolute;
+	border:1px solid black;
+	left: 380px;
+	bottom: 20px;
+	border-radius: 50%;
+	z-index: 999;
+	cursor: pointer;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>GameVanila</title>
+
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script>
+</head>
+<body>
+
+	<div class="button">
+		<div class="startGame" onclick="lifecycle.startGame()">startGame</div>
+	</div>
+
+	<div id="root">
+		
+		
+
+		<div id="planeUp" class="btn" onmousemove="factoryMovePlane.planeUp()" onmoseout="factoryMovePlane.planeDefault()"></div>
+		<div id="planeDown" class="btn" onmousemove="factoryMovePlane.planeDown()" onmoseout="factoryMovePlane.planeDefault()"></div>
+		<div id="planeLeft" class="btn" onmousemove="factoryMovePlane.planeLeft()"></div>
+		<div id="planeRight" class="btn" onmousemove="factoryMovePlane.planeRight()"></div>
+
+		<div class="btnSound"></div>
+		<div class="btnShiftUp"></div>
+		<div class="btnShiftDown"></div>
+		<div class="btnPause"></div>
+		
+		<div id="timerMain">
+			<img src="images/timer.png"alt="img">
+			<div id="timer">0:00</div>
+		</div>
+
+		<div id="score_fuel">
+			<img src="images/fuel_score.png" alt="img">
+			<div id="score__fuel">0:00</div>
+		</div>
+	
+		<div id="score_star">
+			<img src="images/star.png" alt="img">
+			<div id="score__star">0:00</div>
+		</div>
+	
+		<div id="plane" class="plane">3</div>
+
+	<!-- <div class="bird"></div> -->
+	<!-- <div class="fuel"></div> -->
+<!-- <div class="star"></div> -->
+<!-- <div class="cloud"></div> -->
+
+
+	</div>
+<script>
+
+
+</script>
+</body>
+</html>

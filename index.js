@@ -4,10 +4,10 @@ const TYPE_FUEL = "fuel";
 const TYPE_PLANE = "plane";
 const TYPE_STAR = "star";
 
-const TYPE_STAR_P = 50;
+const TYPE_STAR_P = 30;
 const TYPE_PLANE_P = 0;
 const TYPE_BIRD_P = 70;
-const TYPE_FUEL_P = 30;
+const TYPE_FUEL_P = 20;
 const TYPE_CLOUD_P = 100;
 
 
@@ -109,46 +109,61 @@ const lifecycle = (() => {
 	}
 })();
 
+
 const factoryMovePlane = (() => {
 
 	planeUp = () => {
-		let offset = parseInt(plane.style.top);
+		initPlanePosition();
+		let offset = jsonPlane.y;
 		console.log(offset);
 		if(offset >0){
 			plane.style.top = (offset - 7) + 'px';
 		}
+		drawPosition();
 		plane.style.transform = "rotate(-10deg)";
 	}
 
 	planeDown = () => {
-		let offset = parseInt(plane.style.top);
+		initPlanePosition();
+		let offset = jsonPlane.y;
 		console.log(offset);
 		if(offset => 0){
 			if(offset < 700){
 				plane.style.top = (offset + 7) + 'px';
 			}
 		}
+		drawPosition();
 		plane.style.transform = "rotate(10deg)";
 	}
 
 	planeLeft = () => {
-		let offset = parseInt(plane.style.left)
+		initPlanePosition();
+		let offset = jsonPlane.x;
 		if(offset > 0){
 			plane.style.left = (offset -7) +'px;'
 		}
+		drawPosition();
 	}
 
 	planeRight = () => {
-		let offset = parseInt(plane.style.left)
+		initPlanePosition();
+		let offset = jsonPlane.x;
 		if(offset => 0){
 			if(offset < 1000){
 				plane.style.left = (offset +7) +'px;'
 			}
 		}
+		drawPosition();
 	}
 
 	planeDefault = () => {
 		plane.style.transform = "rotate(0deg)";
+	}
+
+	drawPosition = () => {
+		initPlanePosition();
+		let position = document.querySelector("#position");
+		position.innerHTML = jsonPlane.x + ":" + jsonPlane.y;
 	}
 
 	return {
@@ -163,7 +178,22 @@ const factoryMovePlane = (() => {
 
 
 
+///////////////////////
+let jsonPlane = {
+	x: 0,
+	y:0 ,
+	width: 0 ,
+	height: 0
+};
 
+function initPlanePosition() {
+    jsonPlane = {
+        x: parseInt(plane.style.left),
+        y: parseInt(plane.style.top),
+        width: parseInt(plane.offsetWidth),
+        height: parseInt(plane.offsetHeight)
+    };
+}
 
-
+////////////
 

@@ -14,10 +14,8 @@
 
 	<div id="root">
 		
-		
-
-		<div id="planeUp" class="btn" onmousemove="factoryMovePlane.planeUp()" onmoseout="factoryMovePlane.planeDefault()"></div>
-		<div id="planeDown" class="btn" onmousemove="factoryMovePlane.planeDown()" onmoseout="factoryMovePlane.planeDefault()"></div>
+		<div id="planeUp" class="btn" onmousemove="factoryMovePlane.planeUp()" onmouseout="factoryMovePlane.planeDefault()"></div>
+		<div id="planeDown" class="btn" onmousemove="factoryMovePlane.planeDown()" onmouseout="factoryMovePlane.planeDefault()"></div>
 		<div id="planeLeft" class="btn" onmousemove="factoryMovePlane.planeLeft()"></div>
 		<div id="planeRight" class="btn" onmousemove="factoryMovePlane.planeRight()"></div>
 
@@ -41,7 +39,9 @@
 			<div id="score__star">0:00</div>
 		</div>
 	
-		<div id="plane" class="plane">3</div>
+		<div id="plane" class="plane">
+			<div id="position"></div>
+		</div>
 
 	<!-- <div class="bird"></div> -->
 	<!-- <div class="fuel"></div> -->
@@ -52,7 +52,7 @@
 	</div>
 <script>
 
-
+var plane = document.getElementById("plane");
 </script>
 </body>
 </html>
